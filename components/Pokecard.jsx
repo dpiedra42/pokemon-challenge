@@ -10,7 +10,7 @@ function Pokecard(props) {
         }
         return (number);
       }
-      
+
     let img_src = `${POKE_API}${padToThree(props.id)}.png`;
     return(
         <div>
@@ -21,5 +21,7 @@ function Pokecard(props) {
         </div>
     )
 }
+
+
 
 export default Pokecard;
