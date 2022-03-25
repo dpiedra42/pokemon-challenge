@@ -23,7 +23,7 @@ function Pokegame() {
     let randPokemon = hand2.splice(randIdx, 1)[0];
     hand1.push(randPokemon); 
   }
-
+ 
   // callback function to add exp of each pokemon in the hand, starting at 0 
   let totalExp1 = hand1.reduce((exp, pokemons) => exp + pokemons.exp, 0);
   let totalExp2 = hand2.reduce((exp, pokemons) => exp + pokemons.exp, 0);

@@ -8,9 +8,9 @@ function Pokedex(props) {
     }
 
     return(
-        <div>
-        <h1>{props.isWinner ? 'Winning Hand!' : 'Losing Hand!'}</h1>
-        <p>Total Exp: {props.exp}</p>
+    <div>
+        <h1 suppressHydrationWarning={true}>{props.isWinner ? 'Winning Hand!' : 'Losing Hand!'}</h1>
+        <p suppressHydrationWarning={true}>Total Exp: {props.exp}</p>
         <button onClick={refreshPage}>Click to reload!</button>
         <div>
             {props.pokemons.map(p => (

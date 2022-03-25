@@ -14,10 +14,10 @@ function Pokecard(props) {
     let img_src = `${POKE_API}${padToThree(props.id)}.png`;
     return(
         <div>
-            <h1 className="Pokecard-name">{props.name}</h1>
+            <h1 suppressHydrationWarning={true} className="Pokecard-name">{props.name}</h1>
             {/* <Image src={img_src} alt={props.name} layout='fill'/> */}
-            <div className="Pokecard-info">Type: {props.type}</div>
-            <div className="Pokecard-info">EXP: {props.exp}</div>
+            <div suppressHydrationWarning={true} className="Pokecard-info">Type: {props.type}</div>
+            <div suppressHydrationWarning={true} className="Pokecard-info">EXP: {props.exp}</div>
         </div>
     )
 }
