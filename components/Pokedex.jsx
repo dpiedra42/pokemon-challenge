@@ -21,7 +21,7 @@ const Pokedexdiv = styled.div`
     color: black;
     font-size: large;
     border-radius: 15px;
-    background-color: rgb(252,252,252);
+    background-color: rgb(255,255,255);
 `
 
 const Pokecards = styled.div`

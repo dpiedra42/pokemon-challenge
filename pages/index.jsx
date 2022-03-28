@@ -59,6 +59,7 @@ const PokegameDiv = styled.div`
   }
   p{
     margin-top: 0px;
+    padding-bottom: 10px;
   }
 `
 
