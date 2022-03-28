@@ -45,12 +45,21 @@ function Pokegame() {
 }
 
 const PokegameDiv = styled.div`
-  background-color: rgb(25, 133, 240);
-  padding-top: 1px;
   display: flex;
   align-items: center;
   flex-direction: column;
-  color: rgb(246, 246, 109);
+  color: white;
+
+  button {
+    background-color: rgb(246, 204,71);
+  }
+  h1 {
+    padding-top: 30px;
+    margin-bottom: 20px;
+  }
+  p{
+    margin-top: 0px;
+  }
 `
 
 export default Pokegame;

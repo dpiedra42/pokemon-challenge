@@ -3,7 +3,7 @@ import styled from '@emotion/styled';
 const POKE_API = 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/';
 
 const PokecardDiv = styled.div `
-    box-shadow: 7px 10px 12px -5px palevioletred;
+    /* box-shadow: 7px 10px 12px -5px paleturquoise; */
     background-color: rgb(242, 242, 242);
     border-radius: 10px;
     width: 250px;
@@ -12,7 +12,6 @@ const PokecardDiv = styled.div `
 `
 const Pokename = styled.h1 `
     color: black;
-    text-decoration: underline;
 `
 const PokeInfo = styled.div `
     color: black;

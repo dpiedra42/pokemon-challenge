@@ -18,8 +18,10 @@ function Pokedex(props) {
 
 const Pokedexdiv = styled.div`
     text-align: center;
-    color: rgb(246, 246, 109);
+    color: black;
     font-size: large;
+    border-radius: 15px;
+    background-color: rgb(252,252,252);
 `
 
 const Pokecards = styled.div`
