@@ -53,14 +53,6 @@ const PokegameDiv = styled.div`
   button {
     background-color: rgb(246, 204,71);
   }
-  h1 {
-    padding-top: 30px;
-    margin-bottom: 20px;
-  }
-  p{
-    margin-top: 0px;
-    padding-bottom: 10px;
-  }
 `
 
 export default Pokegame;

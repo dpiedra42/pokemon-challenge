@@ -16,10 +16,19 @@ const ImageDiv = styled.div `
 const Pokename = styled.h1 `
     color: black;
     font-weight: 400;
+    margin: 0px;
+    display: flex;
+    justify-content: left;
+    font-size: x-large;
 `
 const PokeInfo = styled.div `
-    color: black;
     font-style: italic;
+`
+const PokeExp = styled.div `
+    color: grey;
+    display: flex;
+    justify-content: left;
+    font-size: small;
 `
 function Pokecard(props) {
 
@@ -38,9 +47,9 @@ function Pokecard(props) {
             <ImageDiv>
                 <Image src={img_src} alt='pokemon' width={200} height={200}/>
             </ImageDiv>
-            <Pokename suppressHydrationWarning={true} className="Pokecard-name">{props.name}</Pokename>
-            <PokeInfo suppressHydrationWarning={true} className="Pokecard-info">Type: {props.type}</PokeInfo>
-            <PokeInfo suppressHydrationWarning={true} className="Pokecard-info">EXP: {props.exp}</PokeInfo>
+            <PokeExp suppressHydrationWarning={true}>EXP: {props.exp}</PokeExp>
+            <Pokename suppressHydrationWarning={true}>{props.name}</Pokename>
+            <PokeInfo suppressHydrationWarning={true}>Type: {props.type}</PokeInfo>
         </PokecardDiv>
     )
 }
