@@ -74,7 +74,7 @@ const PokeInfo = styled.div`
     background-color: ${props => props.backColor};
     color: ${props => props.textColor};
     width: 40%;
-    margin: 3px;
+    margin: 3px 0 3px 0;
 `
 const PokeExp = styled.div `
     color: grey;
