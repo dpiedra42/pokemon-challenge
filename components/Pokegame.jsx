@@ -36,9 +36,9 @@ function Pokegame() {
   return (
     <PokegameDiv>
       <PokegameH1>Welcome to the Pokedex Challenge</PokegameH1>
-      <PokegameP>Two teams will compete and the team with the highest total Exp wins!
-                 Your team is the one on top while the computers is the one on the bottom.
-      </PokegameP>
+      <PokegameP>Two teams will compete and the team with the highest total Exp wins!</PokegameP>
+      <PokegameP>Your team is the one on top while the computers is the one on the bottom.</PokegameP>
+      
       <Pokedex pokemons={hand1}
                exp={totalExp1}
                isWinner = {totalExp1 > totalExp2}
