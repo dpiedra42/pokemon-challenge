@@ -77,7 +77,7 @@ const PokegameH1 = styled.h1`
   padding-top: 25px;
 `
 const PokegameP = styled.p`
-  padding-bottom: 15px;
+  margin: 0 0 10px 0;
 `
 
 export default Pokegame;
