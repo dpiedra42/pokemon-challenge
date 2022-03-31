@@ -35,8 +35,8 @@ function Pokegame() {
 
   return (
     <PokegameDiv>
-      <h1>Welcome to the Pokedex Challenge</h1>
-      <p>Two teams of pokemons will battle it out, but only the team with the most EXP will win!</p>
+      <PokegameH1>Welcome to the Pokedex Challenge</PokegameH1>
+      <PokegameP>Two teams of pokemons will battle it out, but only the team with the most EXP will win!</PokegameP>
       <Pokedex pokemons={hand1}
                exp={totalExp1}
                isWinner = {totalExp1 > totalExp2}
@@ -57,14 +57,26 @@ const PokegameDiv = styled.div`
   color: white;
 
   button {
-    background-color: white;
+    background-color: grey;
+    color: white;
     font-family: "Montserrat Alternates", sans-serif;
     font-size: large;
     border: none;
     border-radius: 2px;
     margin: 10px;
     padding: 2px 10px 2px 10px;
+
+    :hover {
+      background-color: white;
+      color: black;
+    }
   }
+`
+const PokegameH1 = styled.h1`
+  padding-top: 25px;
+`
+const PokegameP = styled.p`
+  padding-bottom: 15px;
 `
 
 export default Pokegame;

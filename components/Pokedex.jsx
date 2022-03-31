@@ -5,8 +5,8 @@ import Pokecard from "./Pokecard";
 function Pokedex(props) {
     return(
     <Pokedexdiv>
-        <h2>{props.isWinner ? 'Winning Team!' : 'Losing Team!'}</h2>
-        <p>Total Exp: {props.exp}</p>
+        <PokedexH2>{props.isWinner ? 'Winning Team!' : 'Losing Team!'}</PokedexH2>
+        <PokedexP>Total Exp: {props.exp}</PokedexP>
         <Pokecards>
             {props.pokemons.map(p => (
                 <Pokecard id={p.id}
@@ -31,7 +31,12 @@ const Pokedexdiv = styled.div`
     border-radius: 15px;
     background-color: rgb(255,255,255);
 `
-
+const PokedexH2 = styled.h2`
+    margin-bottom: 0;
+`
+const PokedexP = styled.p`
+    margin-top: 5px;
+`
 const Pokecards = styled.div`
     display: flex;
     flex-wrap: wrap;

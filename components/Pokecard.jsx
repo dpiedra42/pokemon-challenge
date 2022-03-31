@@ -56,11 +56,13 @@ const PokecardDiv = styled.div `
 `
 const ImageDiv = styled.div `
     background-color: rgb(242,242,242);
+    display: flex;
+    justify-content: center;
 `
 const Pokename = styled.h1 `
     color: black;
     font-weight: 400;
-    margin: 0px;
+    margin: 10px 0 5px 0;
     display: flex;
     justify-content: left;
     font-size: x-large;
