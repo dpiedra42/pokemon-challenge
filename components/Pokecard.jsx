@@ -8,7 +8,6 @@ const PokecardDiv = styled.div `
     border-radius: 10px;
     width: 250px;
     padding: 10px;
-    margin: 1rem;
 `
 const ImageDiv = styled.div `
     background-color: rgb(242,242,242);
@@ -21,8 +20,10 @@ const Pokename = styled.h1 `
     justify-content: left;
     font-size: x-large;
 `
-const PokeInfo = styled.div `
-    font-style: italic;
+const PokeInfo = styled.div`
+    /* font-style: italic; */
+    color: ${props => props.colorStyle};
+
 `
 const PokeExp = styled.div `
     color: grey;
@@ -31,6 +32,17 @@ const PokeExp = styled.div `
     font-size: small;
 `
 function Pokecard(props) {
+    const typecolor = {
+        Normal: 'grey',
+        Water: 'blue',
+        Bug: 'green',
+        Flying: 'lightblue',
+        Electric: 'yellow',
+        Fairy: 'pink',
+        Ghost: 'magenta',
+        Poison: 'purple',
+        Fire: 'red'
+    };
 
     function padToThree(number) {
         if (number<=999)
@@ -41,15 +53,15 @@ function Pokecard(props) {
       }
 
     let img_src = `${POKE_API}${padToThree(props.id)}.png`;
-
+    console.log(props.type);
     return(
         <PokecardDiv>
             <ImageDiv>
                 <Image src={img_src} alt='pokemon' width={200} height={200}/>
             </ImageDiv>
-            <PokeExp suppressHydrationWarning={true}>EXP: {props.exp}</PokeExp>
-            <Pokename suppressHydrationWarning={true}>{props.name}</Pokename>
-            <PokeInfo suppressHydrationWarning={true}>Type: {props.type}</PokeInfo>
+            <PokeExp>EXP: {props.exp}</PokeExp>
+            <Pokename>{props.name}</Pokename>
+            <PokeInfo colorStyle={typecolor[() => props.type]}>Type: {props.type}</PokeInfo>
         </PokecardDiv>
     )
 }

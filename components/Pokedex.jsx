@@ -5,8 +5,8 @@ import Pokecard from "./Pokecard";
 function Pokedex(props) {
     return(
     <Pokedexdiv>
-        <h2 suppressHydrationWarning={true}>{props.isWinner ? 'Winning Team!' : 'Losing Team!'}</h2>
-        <p suppressHydrationWarning={true}>Total Exp: {props.exp}</p>
+        <h2>{props.isWinner ? 'Winning Team!' : 'Losing Team!'}</h2>
+        <p>Total Exp: {props.exp}</p>
         <Pokecards>
             {props.pokemons.map(p => (
                 <Pokecard id={p.id} name={p.name} type={p.type} exp={p.exp} key={p.id}/>
