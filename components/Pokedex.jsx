@@ -9,7 +9,15 @@ function Pokedex(props) {
         <p>Total Exp: {props.exp}</p>
         <Pokecards>
             {props.pokemons.map(p => (
-                <Pokecard id={p.id} name={p.name} type={p.type} exp={p.exp} key={p.id}/>
+                <Pokecard id={p.id}
+                          name={p.name}
+                          type={p.type}
+                          type2={p.type2} 
+                          color={p.color1}
+                          color2={p.color2}
+                          exp={p.exp}
+                          key={p.id}
+                />
             ))}
         </Pokecards>
     </Pokedexdiv>

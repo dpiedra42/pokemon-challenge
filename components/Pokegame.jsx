@@ -4,13 +4,13 @@ import styled from '@emotion/styled';
 
 function Pokegame() {
   const pokemons = [
-    {id: 4, name: 'Charmander', type: 'Fire', exp: 62},
-    {id: 7, name: 'Squirtle', type: 'Water', exp: 63},
-    {id: 11, name: 'Metapod', type: 'Bug', exp: 72},
-    {id: 12, name: 'Butterfree', type: ['Bug', ' Flying'], exp: 178},
+    {id: 4, name: 'Charmander', type: 'Fire', color1: 'white', exp: 62},
+    {id: 7, name: 'Squirtle', type: 'Water', color1: 'white', exp: 63},
+    {id: 11, name: 'Metapod', type: 'Bug', color1: 'white', exp: 72},
+    {id: 12, name: 'Butterfree', type: 'Bug', type2: 'Flying', color1: 'white', exp: 178},
     {id: 25, name: 'Pikachu', type: 'Electric', exp: 112},
-    {id: 39, name: 'Jigglypuff', type: 'Normal, Fairy', exp: 95},
-    {id: 94, name: 'Gengar', type: 'Ghost, Poison', exp: 225},
+    {id: 39, name: 'Jigglypuff', type: 'Normal', type2: 'Fairy', exp: 95},
+    {id: 94, name: 'Gengar', type: 'Ghost', type2: 'Poison', color1: 'white', color2: 'white', exp: 225},
     {id: 133, name: 'Eevee', type: 'Normal', exp: 65}
   ]
   
@@ -37,9 +37,15 @@ function Pokegame() {
     <PokegameDiv>
       <h1>Welcome to the Pokedex Challenge</h1>
       <p>Two teams of pokemons will battle it out, but only the team with the most EXP will win!</p>
-      <Pokedex pokemons={hand1} exp={totalExp1} isWinner = {totalExp1 > totalExp2}/>
-      <button onClick={refreshPage}>Click to reload!</button>
-      <Pokedex pokemons={hand2} exp ={totalExp2} isWinner = {totalExp2 > totalExp1}/>
+      <Pokedex pokemons={hand1}
+               exp={totalExp1}
+               isWinner = {totalExp1 > totalExp2}
+      />
+      <button onClick={refreshPage}>Try Again</button>
+      <Pokedex pokemons={hand2}
+               exp ={totalExp2}
+               isWinner = {totalExp2 > totalExp1}
+      />
     </PokegameDiv>
   );
 }
@@ -51,6 +57,13 @@ const PokegameDiv = styled.div`
   color: white;
 
   button {
+    background-color: white;
+    font-family: "Montserrat Alternates", sans-serif;
+    font-size: large;
+    border: none;
+    border-radius: 2px;
+    margin: 10px;
+    padding: 2px 10px 2px 10px;
   }
 `
 
